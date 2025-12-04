@@ -27,14 +27,14 @@ int main() {
         for (int j = 0; j < m; j++) { cout << x[i][j] << "\t"; }
         cout << endl;
     }
-    int random,temp;
+    int random, temp;
     random = rand() % m;
-    cout<< random<< endl;
-        for (int i = 0; i < n; i++) {
-            temp = x[i][m-1];
-            x[i][m-1] = x[i][random];
-            x[i][random] = temp;
-        }
+    cout << random << endl;
+    for (int i = 0; i < n; i++) {
+        temp = x[i][m - 1];
+        x[i][m - 1] = x[i][random];
+        x[i][random] = temp;
+    }
     cout << endl;
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) { cout << x[i][j] << "\t"; }

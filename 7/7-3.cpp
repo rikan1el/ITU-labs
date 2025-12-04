@@ -1,7 +1,9 @@
 // Дан одномерный целочисленный массив X[10], заданный случайными числами на промежутке [-10; 10]. Удалить все положительные элементы  в массиве.
 
-#include <windows.h>
 #include <iostream>
+#include <windows.h>
+#include <cmath>
+#include <cstdlib>
 using namespace std;
 
 int main() {

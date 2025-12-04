@@ -9,7 +9,7 @@ using namespace std;
 int main() {
     SetConsoleOutputCP(CP_UTF8);
     srand(time(0));
-    int n,m;
+    int n, m;
     cout << "Введите кол-во строк массива: ";
     cin >> n;
     cout << "Введите кол-во столбецов массива; ";
@@ -22,10 +22,10 @@ int main() {
         }
     }
 
-    cout << "Сгенерированный массив: "<<endl;
+    cout << "Сгенерированный массив: " << endl;
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) {
-            cout <<"X["<<i<<"]"<<"["<<j<<"] = "<<x[i][j] <<endl;
+            cout << "X[" << i << "]" << "[" << j << "] = " << x[i][j] << endl;
         }
     }
     int a = 0;
@@ -36,7 +36,7 @@ int main() {
             }
         }
     }
-    cout << "Сумма положительных элементов матрицы = " <<a << " ";
+    cout << "Сумма положительных элементов матрицы = " << a << " ";
 
 
     cout << endl;

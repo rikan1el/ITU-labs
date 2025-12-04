@@ -10,7 +10,7 @@ using namespace std;
 int main() {
     SetConsoleOutputCP(CP_UTF8);
     srand(time(0));
-    int n,m;
+    int n, m;
     cout << "Введите кол-во строк массива: ";
     cin >> n;
     cout << "Введите кол-во столбецов массива; ";
@@ -23,21 +23,20 @@ int main() {
         }
     }
 
-    cout << "Сгенерированный массив: "<<endl;
+    cout << "Сгенерированный массив: " << endl;
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) {
-            cout <<"X["<<i<<"]"<<"["<<j<<"] = "<<x[i][j] <<endl;
+            cout << "X[" << i << "]" << "[" << j << "] = " << x[i][j] << endl;
         }
     }
     cout << endl;
-    int sum = 1,count = 0;
+    int sum = 1, count = 0;
     for (int j = 0; j < m; j++) {
         if (x[5][j] >= 0) {
-            cout<<x[5][j]<<" ";
+            cout << x[5][j] << " ";
             sum *= x[5][j];
             count++;
         }
     }
-    cout<< "\t" << sum << "\t" << count;
-
+    cout << "\t" << sum << "\t" << count;
 }

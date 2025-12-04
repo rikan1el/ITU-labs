@@ -32,16 +32,16 @@ int main() {
     cout << endl;
     float count = 0.0;
     float sum = 0.0;
-    for (int i = 0; i < n; i++) {
-        cout << a[i][i] << "\t";
-        if (a[i][i] > 0) {
+    for (int i = 0; i < n - 1; i++) {
+        if (a[i][i+1] > 0) {
+            cout << a[i][i+1] << "\t";
+            sum += a[i][i+1];
             count++;
-            sum += a[i][i];
         }
     }
     float x = 0.0;
     x = sum / count;
     cout << endl;
-    cout << x << endl;
+    cout <<"Cреднее арифметическое положительных элементов параллели главной диагонали = " <<x << endl;
 
 }

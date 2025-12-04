@@ -20,39 +20,39 @@ int main() {
         b[i] = rand() % 21 - 10;
     }
 
-    cout << "Сгенерированный массив: "<<endl;
+    cout << "Сгенерированный массив: " << endl;
     for (int i = 0; i < n; i++) {
-        cout <<"X["<<i<<"] = "<<b[i] <<endl;
+        cout << "X[" << i << "] = " << b[i] << endl;
     }
     cout << endl;
 
     int count = 0;
     int c[count];
     for (int i = 0; i < n; i++) {
-        if (b[i] <0) {
+        if (b[i] < 0) {
             count++;
-            c[count-1] = b[i];
+            c[count - 1] = b[i];
         }
-
     }
-    cout << "Получили массив: "<<endl;
+
+    cout << "Получили массив: " << endl;
     for (int i = 0; i < count; i++) {
-        cout <<"C["<<i<<"] = "<<c[i] <<endl;
+        cout << "C[" << i << "] = " << c[i] << endl;
     }
     int min, temp;
-    for (int i=0;i<count-1;i++) {
-        min=i;
-        for (int j=i+1;j<count;j++){
-            if (c[j]<c[min])
-                min=j;
+    for (int i = 0; i < count - 1; i++) {
+        min = i;
+        for (int j = i + 1; j < count; j++) {
+            if (c[j] < c[min])
+                min = j;
         }
-        temp=c[i];
-        c[i]=c[min];
-        c[min]=temp;
+        temp = c[i];
+        c[i] = c[min];
+        c[min] = temp;
     }
     cout << endl;
-    cout << "Получили sort массив: "<<endl;
+    cout << "Получили sort массив: " << endl;
     for (int i = 0; i < count; i++) {
-        cout <<"C["<<i<<"] = "<<c[i] <<endl;
+        cout << "C[" << i << "] = " << c[i] << endl;
     }
 }

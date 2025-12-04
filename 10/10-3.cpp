@@ -16,16 +16,43 @@ int main() {
     for (int i = 0; i < n; i++) {
         c[i] = rand() % 21 - 10;
     }
-    int x[n];
+
+    cout << "Сгенерированный массив c[n]: " << endl;
+    for (int i = 0; i < n; i++) {
+            cout << c[i] << "\t";
+    }
+    cout << endl;
+
+    int count = 0, x[count];
+
     for (int i = 0; i < n; i++) {
         if (c[i] > 0) {
-            x[n] = c[i]*4;
+            count++;
+            x[count-1] = c[i];
         }
     }
 
-    for (int i = 0; i < n; i++) {
-        cout <<"X["<<i<<"] = "<<c[i] <<endl;
+    cout << "Массив x[count] (c[i] > 0): " << endl;
+    for (int i = 0; i < count; i++) {
+        cout << x[i] << "\t";
     }
+    cout << endl;
+    bool exchenge;
+    int temp;
+    do {
+        exchenge = false;
+        for (int i = count-1; i > 0; i--) {
+            if (x[i] < x[i-1]) {
+                temp = x[i-1];
+                x[i-1] = x[i];
+                x[i] = temp;
+                exchenge = true;
+            }
+        }
+    }while (exchenge);
 
-    // не готова
+    cout << "Sort x[count]: " << endl;
+    for (int i = 0; i < count; i++) {
+        cout << x[i] << "\t";
+    }
 }

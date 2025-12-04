@@ -37,7 +37,7 @@ int main() {
     for (int i = 0; i < n; i++) {
         int min = x[i][0];
         for (int j = 0; j < m; j++) {
-            if (x[i][j] < min){
+            if (x[i][j] < min) {
                 min = x[i][j];
                 temp = j;
             }
@@ -53,5 +53,4 @@ int main() {
         for (int j = 0; j < m; j++) { cout << x[i][j] << "\t"; }
         cout << endl;
     }
-
 }

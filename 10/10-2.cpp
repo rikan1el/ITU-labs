@@ -33,7 +33,9 @@ int main() {
             count++;
         }
     }
-    cout<<max<<"\t"<< index<<endl;
+    cout << "Макс: " << max << " (индекс: " << index << ")" << endl;
+    cout << endl;
+
     int temp = 0;
     for (int i = 0; i < n-1;i++){
         for (int j = 0; j < n-i-1;j++)
